@@ -82,7 +82,7 @@ async def query_chatgpt(query: str) -> tuple[str, int]:
     logger.info("GPT-5.5: querying %r", query)
     try:
         response = await openai_client.responses.create(
-            model="gpt-5.5",
+            model="	gpt-5.3-chat-latest",
             tools=[{"type": "web_search_preview"}],
             input=query,
         )
